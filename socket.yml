@@ -1,0 +1,56 @@
+name: travelsocket
+description: Get travel info from Skyscanner
+
+endpoints:
+  get_countries:
+    description: Get countries
+    file: scripts/getCountries.js
+    parameters:
+      locale:
+        type: string
+        description: "In what language should be the list?"
+        example: "en-GB"
+  get_locale:
+    description: Get information of what locale should be provided
+    file: scripts/getLocale.js
+    parameters:
+      locale:
+        type: string
+        description: "What is your language?"
+        example: "Español"
+  get_airport:
+    description: Get information of the airport
+    file: scripts/getAirport.js
+    parameters:
+      airport:
+        type: string
+        description: "What airport code would you like to print?"
+        example: "Warsaw Chopin"
+  get_flights:
+    description: Get flights information
+    file: scripts/getFlight.js
+    parameters:
+      country:
+        type: string
+        description: "What is your country code?"
+        example: "PL"
+      currency:
+        type: string
+        description: "What is your currency?"
+        example: "PLN"
+      locale:
+        type: string
+        description: "What is the locale of your language?"
+        example: "pl-PL"
+      originPlace:
+        type: string
+        description: "Where do you want to fly from?"
+        example: "PL"
+      destinationPlace:
+        type: string
+        description: "Where do you want to fly to?"
+        example: "GB"
+      outboundDate:
+        type: string
+        description: "When do you want to fly?"
+        example: "2017-03"
